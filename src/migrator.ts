@@ -23,6 +23,8 @@
   be in an inconsistent state.
 */
 
+import assert from 'node:assert';
+
 import * as _ from 'lodash';
 import {
   Collection,
@@ -31,8 +33,6 @@ import {
   MongoClientOptions,
   ObjectId,
 } from 'mongodb';
-import { typeCheck } from 'type-check';
-const check = typeCheck;
 
 export type SyslogLevels =
   | 'debug'
@@ -454,8 +454,9 @@ export class Migrator {
     locked: boolean;
   }): Promise<{ version: number; locked: boolean } | null> {
     // Be quite strict
-    check('Number', control.version);
-    check('Boolean', control.locked);
+    assert(control && typeof control === 'object');
+    assert(typeof control.version === 'number');
+    assert(typeof control.locked === 'boolean');
 
     const updateResult = await this.collection.updateOne(
       {
