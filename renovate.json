@@ -1,23 +1,22 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": false,
+  "baseBranches": ["next"],
+  "configMigration": true,
+  "enabled": true,
   "extends": [
-    "config:base"
+    "config:js-lib",
+    ":semanticCommitTypeAll(chore)",
+    ":pinDigestsDisabled"
   ],
-  "baseBranches": [
-    "next"
-  ],
-  "labels": [
-    "bot:renovate"
-  ],
-  "requiredStatusChecks": null,
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
-  "reviewers": [
-    "emmanuelbuah"
-  ],
-  "schedule": ["after 12pm and before 6pm every day"],
-  "commitMessagePrefix": "Renovate:",
+  "ignoreDeps": ["mongodb", "bson"],
+  "labels": ["bot:renovate"],
+  "prConcurrentLimit": 20,
+  "prHourlyLimit": 2,
+  "reviewers": ["team:engineers"],
+  "schedule": ["every weekend"],
+  "semanticCommitScope": "deps",
+  "semanticCommits": "enabled",
   "separateMultipleMajor": true,
   "timezone": "America/Chicago"
 }
