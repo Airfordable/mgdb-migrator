@@ -2,10 +2,10 @@ A simple migration system for mongodb supporting up/downwards migrations.
 
 ## Status
 
-| Branch |                                                    Status                                                     |
-| ------ | :-----------------------------------------------------------------------------------------------------------: |
-| Next   |  ![CI Workflow](https://github.com/emmanuelbuah/mgdb-migrator/workflows/CI%20Workflow/badge.svg?branch=next)  |
-| Master | ![CI Workflow](https://github.com/emmanuelbuah/mgdb-migrator/workflows/CI%20Workflow/badge.svg?branch=master) |
+| Branch |                                                       Status                                                        |
+| ------ | :-----------------------------------------------------------------------------------------------------------------: |
+| Next   |  ![CI Workflow](https://github.com/Airfordable/mgdb-migrator/actions/workflows/workflow.yml/badge.svg?branch=next)  |
+| Master | ![CI Workflow](https://github.com/Airfordable/mgdb-migrator/actions/workflows/workflow.yml/badge.svg?branch=master) |
 
 ## Installation
 

@@ -23,14 +23,21 @@
     "test:watch": "jest dist/* --watchAll --useStderr --coverage",
     "test": "jest dist/* --coverage --useStderr --forceExit"
   },
-  "author": "Emmanuel Buah <emmanuelbuah@gmail.com> (https://twitter.com/emmanuelbuah)",
+  "author": {
+    "name": "Airfordable",
+    "email": "engineering@airfordable.com",
+    "url": "https://github.com/Airfordable"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/emmanuelbuah/mgdb-migrator"
+    "url": "https://github.com/Airfordable/mgdb-migrator"
   },
   "bugs": {
-    "url": "https://github.com/emmanuelbuah/mgdb-migrator/issues"
+    "url": "https://github.com/Airfordable/mgdb-migrator/issues"
   },
+  "contributors": [
+    "Emmanuel Buah <emmanuelbuah@gmail.com> (https://twitter.com/emmanuelbuah)"
+  ],
   "keywords": [
     "mongo",
     "mongodb",
