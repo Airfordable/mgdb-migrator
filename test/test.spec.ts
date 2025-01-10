@@ -1,6 +1,7 @@
 import { Migrator } from '../src/';
 
-const dbURL = process.env.DBURL;
+const dbURL =
+  process.env.DBURL || 'mongodb://localhost:27017/mgdb-migrator-test-db';
 const mockLogger = jest.fn();
 
 describe('Migration', () => {
