@@ -1,8 +1,18 @@
+import {
+  afterEach,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  test,
+  vitest,
+} from 'vitest';
+
 import { Migrator } from '../index.js';
 
 const dbURL =
   process.env.DBURL || 'mongodb://localhost:27017/mgdb-migrator-test-db';
-const mockLogger = jest.fn();
+const mockLogger = vitest.fn();
 
 describe('Migration', () => {
   let migrator: Migrator;
@@ -223,8 +233,8 @@ describe('Migration', () => {
       let mockedUpFunc: jest.Mock;
       let mockedDownFunc: jest.Mock;
       beforeEach(() => {
-        mockedUpFunc = jest.fn();
-        mockedDownFunc = jest.fn();
+        mockedUpFunc = vitest.fn();
+        mockedDownFunc = vitest.fn();
         migrator.add({
           /* eslint-disable sort-keys */
           version: 3,

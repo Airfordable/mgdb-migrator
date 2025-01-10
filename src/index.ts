@@ -4,6 +4,6 @@ import {
   Migration,
   Migrator,
   SyslogLevels,
-} from './migrator';
+} from './migrator.js';
 
 export { Logger, Migrator, Migration, MigratorOptions, SyslogLevels };

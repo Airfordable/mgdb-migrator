@@ -4,6 +4,7 @@
   "description": "Mongodb schema and data migration lib",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
+  "type": "module",
   "scripts": {
     "build:watch": "rm -rf dist && tsc -w",
     "build": "tsc",
@@ -20,10 +21,8 @@
     "prettier:check": "npm run prettier -- --check",
     "prettier:write": "npm run prettier -- --write",
     "start": "npm run test",
-    "test:debug:watch": "node --inspect=0.0.0.0:5857 node_modules/.bin/jest dist/* --coverage --useStderr",
-    "test:debug": "node --inspect=0.0.0.0:5857 node_modules/.bin/jest dist/* --coverage --useStderr --forceExit",
-    "test:watch": "jest dist/* --watchAll --useStderr --coverage",
-    "test": "jest dist/* --coverage --useStderr --forceExit"
+    "test:watch": "vitest watch",
+    "test": "vitest run"
   },
   "author": {
     "name": "Airfordable",
@@ -52,7 +51,6 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@types/jest": "29.5.14",
     "@types/lodash": "4.17.14",
     "@types/node": "22.10.6",
     "eslint": "9.18.0",
@@ -60,12 +58,12 @@
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-prettier": "5.2.1",
     "husky": "9.1.7",
-    "jest": "29.7.0",
     "lint-staged": "15.3.0",
     "mongodb": "6.12.0",
     "prettier": "3.4.2",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.20.0"
+    "typescript-eslint": "8.20.0",
+    "vitest": "2.1.8"
   },
   "dependencies": {
     "lodash": "4.17.21"
