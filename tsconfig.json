@@ -8,6 +8,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "esModuleInterop": true,
+    "strict": true,
     "sourceMap": true,
     "removeComments": true
   },
