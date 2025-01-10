@@ -1,4 +1,4 @@
-import { Migrator } from '../src/';
+import { Migrator } from '../index.js';
 
 const dbURL =
   process.env.DBURL || 'mongodb://localhost:27017/mgdb-migrator-test-db';

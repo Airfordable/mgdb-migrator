@@ -72,7 +72,7 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "testRegex": "dist/test/*.+(spec|int|unit)\\.js$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(unit|int))\\.js$",
     "verbose": true
   },
   "prettier": {
