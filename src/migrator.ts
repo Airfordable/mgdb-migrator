@@ -24,7 +24,13 @@
 */
 
 import * as _ from 'lodash';
-import { Collection, Db, MongoClient, MongoClientOptions } from 'mongodb';
+import {
+  Collection,
+  Db,
+  MongoClient,
+  MongoClientOptions,
+  ObjectId,
+} from 'mongodb';
 import { typeCheck } from 'type-check';
 const check = typeCheck;
 
@@ -66,6 +72,7 @@ export interface Migration {
 }
 
 export class Migrator {
+  private migratorKey = 'control' as unknown as ObjectId;
   private defaultMigration = {
     down: (_db: Db) => Promise.reject(`Can't go down from default`),
     name: 'default',
@@ -246,7 +253,10 @@ export class Migrator {
    * @memberof Migration
    */
   public unlock(): void {
-    this.collection.updateOne({ _id: 'control' }, { $set: { locked: false } });
+    this.collection.updateOne(
+      { _id: this.migratorKey },
+      { $set: { locked: false } }
+    );
   }
 
   /**
@@ -284,7 +294,7 @@ export class Migrator {
        */
       const updateResult = await self.collection.findOneAndUpdate(
         {
-          _id: 'control',
+          _id: this.migratorKey,
           locked: false,
         },
         {
@@ -421,7 +431,7 @@ export class Migrator {
    * @memberof Migration
    */
   private async getControl(): Promise<MigrationControl> {
-    const con = await this.collection.findOne({ _id: 'control' });
+    const con = await this.collection.findOne({ _id: this.migratorKey });
     return (
       con ||
       (await this.setControl({
@@ -449,7 +459,7 @@ export class Migrator {
 
     const updateResult = await this.collection.updateOne(
       {
-        _id: 'control',
+        _id: this.migratorKey,
       },
       {
         $set: {
