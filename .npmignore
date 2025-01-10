@@ -3,6 +3,5 @@ coverage/
 .vscode/
 docker-compose.yml
 DockerFile
-startup.sh
 tsconfig.json
 tslint.json
