@@ -15,7 +15,6 @@ describe('Migration', () => {
       logIfLatest: true,
       logger: mockLogger,
     });
-    await migrator.config();
   });
 
   beforeEach(() => {
@@ -221,8 +220,8 @@ describe('Migration', () => {
     });
 
     describe('Executes migrations with right callback params', () => {
-      let mockedUpFunc;
-      let mockedDownFunc;
+      let mockedUpFunc: jest.Mock;
+      let mockedDownFunc: jest.Mock;
       beforeEach(() => {
         mockedUpFunc = jest.fn();
         mockedDownFunc = jest.fn();
