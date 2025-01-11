@@ -3,7 +3,7 @@ import { Migrator } from '../index.js';
 describe('Migrator', () => {
   describe('#setControl', () => {
     it('should throw if the argument is not an object', async () => {
-      const migrator = new Migrator();
+      const migrator = new Migrator({ db: { connectionUrl: '' } });
 
       const promise = migrator['setControl'](
         // @ts-expect-error -- intentionally passing the wrong type
@@ -14,7 +14,7 @@ describe('Migrator', () => {
     });
 
     it('should throw if control.version is not a number', () => {
-      const migrator = new Migrator();
+      const migrator = new Migrator({ db: { connectionUrl: '' } });
 
       const promise = migrator['setControl'](
         // @ts-expect-error -- intentionally passing the wrong type
@@ -25,7 +25,7 @@ describe('Migrator', () => {
     });
 
     it('should throw if control.locked is not a boolean', () => {
-      const migrator = new Migrator();
+      const migrator = new Migrator({ db: { connectionUrl: '' } });
 
       const promise = migrator['setControl'](
         // @ts-expect-error -- intentionally passing the wrong type
