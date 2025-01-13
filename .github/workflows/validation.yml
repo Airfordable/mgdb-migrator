@@ -1,4 +1,4 @@
-name: CI Workflow
+name: Validation
 
 on:
   pull_request:
@@ -8,6 +8,7 @@ on:
       - p/**
       - next
       - master
+      - main
 
 jobs:
   lint_build_test:
@@ -20,10 +21,17 @@ jobs:
         image: mongo
         ports:
           - 27017:27017
-
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x, 20.x, 22.x, lts/*, latest]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: NPM install
         run: npm ci
@@ -36,4 +44,3 @@ jobs:
 
       - name: Test
         run: npm run test
-
