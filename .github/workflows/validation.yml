@@ -18,8 +18,10 @@ jobs:
         ports:
           - 27017:27017
     strategy:
+      fail-fast: false
       matrix:
         node-version: [14, 16, 18, 20, 22, lts/*, latest]
+        mongodb-version: ['^4.17.2', '^5']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,8 +31,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: NPM install
-        run: npm ci
+      - name: Install dependencies, including the specified MongoDB driver
+        run: npm install mongodb@"${{ matrix.mongodb-version }}"
+
+      - name: List installed mongodb version
+        run: npm list mongodb
 
       - name: Lint
         run: npm run lint
