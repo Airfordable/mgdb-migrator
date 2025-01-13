@@ -1,38 +1,15 @@
-
 {
   "compilerOptions": {
     "target": "es6",
-    "allowJs": true,
     "module": "commonjs",
-    "jsx": "react",
     "moduleResolution": "node",
     "declaration": true,
     "rootDir": ".",
     "outDir": "dist",
     "baseUrl": ".",
+    "esModuleInterop": true,
     "sourceMap": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "pretty": true,
-    "removeComments": true,
-    "traceResolution": false,
-    "paths": {
-      "*": [
-        "node_modules/@types/*",
-        "src/*",
-        "*"
-      ],
-      "af-data-models": [
-        "src/index"
-      ]
-    }
+    "removeComments": true
   },
-  "files": [
-    "src/index.ts"
-  ],
-  "include": [
-    "test/**/*"
-  ]
+  "include": ["**/*.ts"]
 }
-
