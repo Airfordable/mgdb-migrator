@@ -8,6 +8,7 @@ on:
       - p/**
       - next
       - master
+      - main
 
 jobs:
   lint_build_test:
