@@ -71,7 +71,7 @@
     "lodash": "4.17.21"
   },
   "peerDependencies": {
-    "mongodb": "^4.17.2 || ^5"
+    "mongodb": "^5"
   },
   "jest": {
     "testEnvironment": "node",
