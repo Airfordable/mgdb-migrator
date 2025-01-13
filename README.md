@@ -46,10 +46,10 @@ migrator.config({
     // optional database name, in case using it in connection string is not an option
     name: 'your database name',
     // optional mongdb Client options
-    options: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
+    // see https://mongodb.github.io/node-mongodb-native/4.1/interfaces/MongoClientOptions.html
+    // options {
+    //  ...
+    // },
   },
 }); // Returns a promise
 ```
@@ -77,10 +77,10 @@ var migrator = new Migrator({
     // optional database name, in case using it in connection string is not an option
     name: 'your database name',
     // optional mongdb Client options
-    options: {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
+    // see https://mongodb.github.io/node-mongodb-native/4.1/interfaces/MongoClientOptions.html
+    // options {
+    //  ...
+    // },
   },
 });
 await migrator.config(); // Returns a promise
@@ -93,7 +93,7 @@ migrator.add({
   version: 1,
   up: function (db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 1
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
   },
 });
 ```
@@ -114,11 +114,11 @@ migrator.add({
   name: 'Name for this migration',
   up: function (db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 1.
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
   },
   down: function (db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 0
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
   },
 });
 
@@ -127,11 +127,11 @@ migrator.add({
   name: 'Name for this migration',
   up: function (db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 2
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
   },
   down: function (db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 1
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
   },
 });
 ```
@@ -144,12 +144,12 @@ migrator.add({
   name: 'Name for this migration',
   up: async function(db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 2
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
      await db.collections('someCollection')....
   },
   down: async function(db, logger) {
     // use `db`(mongo driver Db instance) for migration setup to version 1
-    // See http://mongodb.github.io/node-mongodb-native/2.2/api/Db.html for db api
+    // See https://mongodb.github.io/node-mongodb-native/4.1/classes/Db.html for db api
     await db.collections('someCollection')....
   }
 });
