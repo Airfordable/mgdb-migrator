@@ -9,7 +9,6 @@
   "labels": ["bot:renovate"],
   "prConcurrentLimit": 20,
   "prHourlyLimit": 2,
-  "reviewers": ["team:engineers"],
   "schedule": ["every weekend"],
   "semanticCommitScope": "deps",
   "semanticCommits": "enabled",
