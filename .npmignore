@@ -1,7 +1,12 @@
-src/
-coverage/
-dist/**/__tests__/
-.vscode/
-docker-compose.yml
-tsconfig.json
-tslint.json
+# Ignore everything...
+*
+
+# ...except certain public files
+!dist/**
+!package.json
+!CHANGELOG.md
+!README.md
+!LICENSE
+
+# But still ignore these
+dist/**/__tests__/**
