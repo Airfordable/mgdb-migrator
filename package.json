@@ -12,8 +12,8 @@
     "docker:test": "npm run build && docker-compose up mgdb-migrator-test || true",
     "lint": "npm run prettier:check && npm run eslint",
     "lint:fix": "npm run prettier:write && npm run eslint:fix",
-    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "eslint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
     "prepare": "husky && npm run lint && npm run build",
     "prestart": "npm run lint && npm run build:watch & sleep 12s",
     "prettier": "prettier ./**/*.{js,json,html,md,yml,ts}",
@@ -52,11 +52,10 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
+    "@eslint/js": "8.57.1",
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.14",
     "@types/node": "22.10.6",
-    "@typescript-eslint/eslint-plugin": "8.20.0",
-    "@typescript-eslint/parser": "8.20.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-import": "2.31.0",
@@ -66,7 +65,8 @@
     "lint-staged": "15.3.0",
     "mongodb": "5.9.2",
     "prettier": "3.4.2",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "typescript-eslint": "8.20.0"
   },
   "dependencies": {
     "lodash": "4.17.21"
