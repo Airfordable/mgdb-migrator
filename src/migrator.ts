@@ -302,7 +302,8 @@ export class Migrator {
             locked: true,
             lockedAt: new Date(),
           },
-        }
+        },
+        { includeResultMetadata: true }
       );
 
       return null != updateResult.value && 1 === updateResult.ok;
