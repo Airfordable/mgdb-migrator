@@ -7,8 +7,26 @@ on:
       - main
 
 jobs:
-  lint_build_test:
-    name: Lint, Build & Test
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+  test:
+    name: Test
     env:
       DBURL: mongodb://localhost:27017/mgdb-migrator-db
     runs-on: ubuntu-latest
@@ -36,9 +54,6 @@ jobs:
 
       - name: List installed mongodb version
         run: npm list mongodb
-
-      - name: Lint
-        run: npm run lint
 
       - name: Build
         run: npm run build
