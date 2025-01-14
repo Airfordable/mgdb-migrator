@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.0.1](https://github.com/Airfordable/mgdb-migrator/compare/v5.0.0...v5.0.1) (2025-01-14)
+
+
+### Bug Fixes
+
+* make public files opt-in, rather than opt-out ([6617bab](https://github.com/Airfordable/mgdb-migrator/commit/6617babdc222284432d3db0a360742bfe7b9f0e1))
+
 ## [5.0.0](https://github.com/Airfordable/mgdb-migrator/compare/v4.0.1...v5.0.0) (2025-01-13)
 
 
