@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.0.0](https://github.com/Airfordable/mgdb-migrator/compare/v5.0.1...v6.0.0) (2025-01-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for mongodb v4
+
+### Features
+
+* add support for mongodb v6 ([f0d37d7](https://github.com/Airfordable/mgdb-migrator/commit/f0d37d7471b4505972a14661664ea5a879424440)), closes [#415](https://github.com/Airfordable/mgdb-migrator/issues/415)
+* drop support for mongodb v4 ([6b9ba6a](https://github.com/Airfordable/mgdb-migrator/commit/6b9ba6a2765d9bbdadc2a4dd9a340770f3e76bc5))
+
 ## [5.0.1](https://github.com/Airfordable/mgdb-migrator/compare/v5.0.0...v5.0.1) (2025-01-14)
 
 
