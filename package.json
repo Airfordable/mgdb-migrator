@@ -52,11 +52,10 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@eslint/js": "8.57.1",
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.14",
     "@types/node": "22.10.6",
-    "eslint": "8.57.1",
+    "eslint": "9.18.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-prettier": "5.2.1",
