@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   mgdb-migrator-dev:
-    image: node:14-alpine
+    image: node:18-alpine
     command: sh -c 'cd /usr/src/mgdb-migrator && exec npm test'
     depends_on:
       - mgdb-migrator-db
@@ -24,7 +24,7 @@ services:
     command: mongod --bind_ip 0.0.0.0
 
   mgdb-migrator-test:
-    image: node:14-alpine
+    image: node:18-alpine
     command: sh -c 'cd /usr/src/mgdb-migrator && exec npm test'
     depends_on:
       - mgdb-migrator-db
