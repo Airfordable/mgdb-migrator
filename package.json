@@ -55,7 +55,7 @@
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.20",
     "@types/node": "22.10.6",
-    "eslint": "9.18.0",
+    "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-prettier": "5.2.1",
