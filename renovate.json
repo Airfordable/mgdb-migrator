@@ -6,6 +6,10 @@
   "extends": ["config:js-lib", ":pinDigestsDisabled"],
   "ignoreDeps": ["mongodb", "bson"],
   "labels": ["bot:renovate"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["every 3 months"]
+  },
   "prConcurrentLimit": 20,
   "prHourlyLimit": 2,
   "schedule": ["every weekend"],
