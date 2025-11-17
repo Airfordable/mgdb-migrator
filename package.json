@@ -50,8 +50,8 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.20",
     "@types/node": "22.10.6",
