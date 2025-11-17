@@ -80,6 +80,7 @@
   },
   "prettier": {
     "endOfLine": "lf",
+    "experimentalTernaries": true,
     "htmlWhitespaceSensitivity": "ignore",
     "semi": true,
     "singleQuote": true,

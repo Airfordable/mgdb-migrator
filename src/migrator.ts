@@ -92,9 +92,9 @@ export class Migrator {
   constructor(opts?: MigratorOptions) {
     // Since we'll be at version 0 by default, we should have a migration set for it.
     this.list = [this.defaultMigration];
-    this.options = opts
-      ? opts
-      : {
+    this.options =
+      opts ? opts : (
+        {
           // Migrations collection name
           collectionName: 'migrations',
           // Mongdb url or mongo Db instance
@@ -105,7 +105,8 @@ export class Migrator {
           logIfLatest: true,
           // Null or a function
           logger: null,
-        };
+        }
+      );
   }
 
   /**
