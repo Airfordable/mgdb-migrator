@@ -38,7 +38,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [14, 16, 18, 20, 22, lts/*, latest]
+        node-version: [14, 16, 18, 20, 22, 24, lts/*, latest]
         mongodb-version: ['^5', '^6']
         exclude:
           # mongodb v6 drops support for Node.js v14
