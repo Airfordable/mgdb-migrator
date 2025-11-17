@@ -4,7 +4,6 @@
   "configMigration": true,
   "enabled": true,
   "extends": ["config:js-lib", ":pinDigestsDisabled"],
-  "ignoreDeps": ["mongodb", "bson"],
   "labels": ["bot:renovate"],
   "lockFileMaintenance": {
     "enabled": true,
