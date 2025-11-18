@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2023",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,

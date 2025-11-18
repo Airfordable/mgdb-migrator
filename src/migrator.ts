@@ -25,7 +25,6 @@
 
 import assert from 'node:assert';
 
-import * as _ from 'lodash';
 import {
   Collection,
   Db,
@@ -178,7 +177,7 @@ export class Migrator {
     Object.freeze(migration);
 
     this.list.push(migration);
-    this.list = _.sortBy(this.list, (m) => m.version);
+    this.list.sort((a, b) => a.version - b.version);
   }
 
   /**
@@ -195,7 +194,7 @@ export class Migrator {
       );
     }
 
-    if (_.isUndefined(command) || command === '' || this.list.length === 0) {
+    if (command == undefined || command === '' || this.list.length === 0) {
       throw new Error('Cannot migrate using invalid command: ' + command);
     }
 
@@ -210,7 +209,7 @@ export class Migrator {
 
     try {
       if (version === 'latest') {
-        await this.execute(_.last(this.list).version);
+        await this.execute(this.list.at(-1).version);
       } else {
         await this.execute(
           parseInt(version as string, null),
