@@ -1,29 +1,26 @@
 ### Description
 
-<!---
-- Include a summary of the change and which issue it relates to
-- List any related issues or dependencies if any
--->
+<!-- Include a summary of the change(s) -->
 
 #### Issues
 
-Closes #(issue)
+Closes #issue
 
 #### Pull request checklist
 
 - [ ] Properly title
 - [ ] Detailed description
-- [ ] Include issue for which this PR closes
-- [ ] Linked issue on Zenhub if applicable
-- [ ] Link to related issues if any
+- [ ] Include issue(s) closed by this PR
+- [ ] Include issue(s) partially addressed by this PR, or there are no such issues
+- [ ] List any blocking issue(s)/PR(s), or there are no blocking issues/PRs
 - [ ] Assign to a reviewer
-- [ ] Include Images/Gifs/Videos for visual changes
+- [ ] Assign to yourself
+- [ ] All visual changes shown in an image/GIF/video, or there are no visual changes
 
 #### Code checklist
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
+- [ ] All database schema changes have migrations, or there are no breaking schema changes
+- [ ] I added as much test coverage to new/changed code as feasible
 - [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My code follows the style guidelines of this project
 - [ ] My changes generate no new warnings
-- [ ] I added tests
-- [ ] Any dependent changes have been merged and published in downstream modules
