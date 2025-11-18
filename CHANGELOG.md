@@ -1,5 +1,22 @@
 # Changelog
 
+## [7.0.0](https://github.com/Airfordable/mgdb-migrator/compare/v6.0.0...v7.0.0) (2025-11-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* The minimum supported Node.js version is now v20.
+
+### Features
+
+* remove dependency on lodash ([18d1482](https://github.com/Airfordable/mgdb-migrator/commit/18d14829ae74ac84e861f5cd7c2514e8f2f4fcb6)), closes [#403](https://github.com/Airfordable/mgdb-migrator/issues/403)
+* support mongodb v7 ([cc7366c](https://github.com/Airfordable/mgdb-migrator/commit/cc7366cff168d5521c057702a1af4ae69d5e31c1))
+
+
+### Miscellaneous Chores
+
+* drop support for node &lt;20 ([26bd435](https://github.com/Airfordable/mgdb-migrator/commit/26bd435c6ff4c755cbf466d4d0f079bf75256a87))
+
 ## [6.0.0](https://github.com/Airfordable/mgdb-migrator/compare/v5.0.1...v6.0.0) (2025-01-14)
 
 
