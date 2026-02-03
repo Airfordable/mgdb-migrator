@@ -13,11 +13,11 @@
   "labels": ["bot:renovate"],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["every 3 months"]
+    "schedule": ["* 0-6 1 */3 *"]
   },
   "prConcurrentLimit": 20,
   "prHourlyLimit": 2,
-  "schedule": ["every weekend"],
+  "schedule": ["* * * * 0,6"],
   "semanticCommitScope": "deps",
   "semanticCommits": "enabled",
   "separateMultipleMajor": true,
