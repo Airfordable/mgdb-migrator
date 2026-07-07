@@ -14,7 +14,7 @@
     "lint:fix": "npm run prettier:write && npm run eslint:fix",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
-    "prepare": "husky && npm run lint && npm run build",
+    "prepare": "husky",
     "prestart": "npm run lint && npm run build:watch & sleep 12s",
     "prettier": "prettier ./**/*.{js,json,html,md,yml,ts}",
     "prettier:check": "npm run prettier -- --check",

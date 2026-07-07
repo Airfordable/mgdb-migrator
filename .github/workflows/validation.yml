@@ -49,7 +49,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies, including the specified MongoDB driver
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install specified MongoDB driver
         run: npm install mongodb@"${{ matrix.mongodb-version }}"
 
       - name: List installed mongodb version
