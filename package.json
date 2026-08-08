@@ -53,7 +53,7 @@
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
     "@types/jest": "30.0.0",
-    "@types/lodash": "4.17.24",
+    "@types/lodash": "4.17.25",
     "@types/node": "24.13.3",
     "eslint": "9.39.5",
     "eslint-config-prettier": "10.1.8",
